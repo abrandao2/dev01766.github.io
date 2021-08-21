@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'AveriaLibre';
+  src: url('./AveriaLibre-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #3d405b;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 40vw;
+  font-family: AveriaLibre;
+}
+
+#optimistic {
+  color: #f4f1de;
+}
+
+#realistic {
+  color: #f2cc8f;
+}
+
+#pessimistic {
+  color: #e07a5f;
+}
