@@ -22,19 +22,19 @@ const main = () => {
   // Months are indexed at 0
   const pessimisticDate = new Date(2021, 08, 30);
   const realisticDate = new Date(2021, 08, 15);
-  // const optimisticDate = new Date(2021, 07, 30);
+  const optimisticDate = new Date(2021, 08, 01);
   const today = new Date();
 
   const sunset = sunsets[today.getMonth() + 1][today.getDate()];
   const pessimisticDays = Math.round(Math.abs((pessimisticDate - today) / oneDay));
   const realisticDays = Math.round(Math.abs((realisticDate - today) / oneDay));
-  // const optimisticDays = Math.round(Math.abs((optimisticDate - today) / oneDay));
+  const optimisticDays = Math.round(Math.abs((optimisticDate - today) / oneDay));
 
   // Get elements for date display
   document.getElementById('sunset').innerHTML = sunset;
   document.getElementById('pessimistic').innerHTML = pessimisticDays;
   document.getElementById('realistic').innerHTML = realisticDays;
-  // document.getElementById('optimistic').innerHTML = optimisticDays;
+  document.getElementById('optimistic').innerHTML = optimisticDays;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
