@@ -1,3 +1,5 @@
+import sunsets from './sunsets';
+
 const main = () => {
   const oneDay = 24 * 60 * 60 * 1000;
 
@@ -8,11 +10,13 @@ const main = () => {
   const optimisticDate = new Date(2021, 07, 30);
   const today = new Date();
 
+  const sunset = sunsets[today.getMonth() + 1][today.getDate()];
   const pessimisticDays = Math.round(Math.abs((pessimisticDate - today) / oneDay));
   const realisticDays = Math.round(Math.abs((realisticDate - today) / oneDay));
   const optimisticDays = Math.round(Math.abs((optimisticDate - today) / oneDay));
 
   // Get elements for date display
+  document.getElementById('sunset').innerHTML = sunset;
   document.getElementById('pessimistic').innerHTML = pessimisticDays;
   document.getElementById('realistic').innerHTML = realisticDays;
   document.getElementById('optimistic').innerHTML = optimisticDays;
