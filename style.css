@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-size: 40vw;
+  font-size: 35vw;
   font-family: AveriaLibre;
 }
 
@@ -26,4 +26,9 @@ body {
 
 #pessimistic {
   color: #e07a5f;
+}
+
+#sunset {
+  font-size: 20vw;
+  color: cadetblue;
 }

@@ -1,4 +1,4 @@
-export default sunsets = {
+const sunsets = {
   august: {
     27: '20:16',
     28: '20:13',
@@ -14,3 +14,5 @@ export default sunsets = {
     5: '19:49'
   }
 };
+
+export default sunsets;
