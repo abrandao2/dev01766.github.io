@@ -20,21 +20,17 @@ const main = () => {
 
   // Create dates
   // Months are indexed at 0
-  const pessimisticDate = new Date(2021, 08, 30);
-  const realisticDate = new Date(2021, 08, 15);
-  const optimisticDate = new Date(2021, 08, 01);
+  const novemberFifteenth = new Date(2021, 10, 15);
+  const decemberFifteenth = new Date(2021, 11, 15);
   const today = new Date();
 
   const sunset = sunsets[today.getMonth() + 1][today.getDate()];
-  const pessimisticDays = Math.round(Math.abs((pessimisticDate - today) / oneDay));
-  const realisticDays = Math.round(Math.abs((realisticDate - today) / oneDay));
-  const optimisticDays = Math.round(Math.abs((optimisticDate - today) / oneDay));
+  const daysToNovemberFifteenth = Math.round(Math.abs((novemberFifteenth - today) / oneDay));
+  const daysToDecemberFifteenth = Math.round(Math.abs((decemberFifteenth - today) / oneDay));
 
   // Get elements for date display
-  document.getElementById('sunset').innerHTML = sunset;
-  document.getElementById('pessimistic').innerHTML = pessimisticDays;
-  document.getElementById('realistic').innerHTML = realisticDays;
-  document.getElementById('optimistic').innerHTML = optimisticDays;
+  document.getElementById('days-to-november-fifteenth').innerHTML = daysToNovemberFifteenth > 0 ? daysToNovemberFifteenth : '-';
+  document.getElementById('days-to-december-fifteenth').innerHTML = daysToDecemberFifteenth > 0 ? daysToDecemberFifteenth : '-';
 }
 
 document.addEventListener('DOMContentLoaded', () => {

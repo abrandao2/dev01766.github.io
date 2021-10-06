@@ -16,16 +16,12 @@ body {
   font-family: AveriaLibre;
 }
 
-#optimistic {
-  color: #f4f1de;
-}
-
-#realistic {
+#days-to-november-first {
   color: #f2cc8f;
 }
 
-#pessimistic {
-  color: #e07a5f;
+#days-to-december-first {
+  color: #f4f1de;
 }
 
 #sunset {
